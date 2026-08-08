@@ -1,0 +1,22 @@
+/* Custom animations and supplemental layout rules */
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-black);
+  color: var(--text-primary);
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);
+  }
+}
+
+.pulsing-border {
+  animation: pulseBorder 4s infinite ease-in-out;
+}
