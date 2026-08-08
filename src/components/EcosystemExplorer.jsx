@@ -291,12 +291,12 @@ export default function EcosystemExplorer({ selectedStartupId, onOpenContact }) 
                 className={`startup-showcase-block glass-card ${startup.glowClass}`}
                 style={{
                   padding: '3.5rem 3rem',
-                  background: 'rgba(10, 14, 26, 0.45)',
-                  backdropFilter: 'blur(28px)',
-                  WebkitBackdropFilter: 'blur(28px)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  background: 'rgba(8, 12, 24, 0.22)',
+                  backdropFilter: 'blur(32px)',
+                  WebkitBackdropFilter: 'blur(32px)',
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
                   borderRadius: 'var(--radius-lg)',
-                  boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
+                  boxShadow: '0 16px 45px rgba(0, 0, 0, 0.4)',
                   position: 'relative',
                   overflow: 'hidden'
                 }}
@@ -425,13 +425,13 @@ export default function EcosystemExplorer({ selectedStartupId, onOpenContact }) 
                   <div 
                     style={{ 
                       direction: 'ltr',
-                      background: 'rgba(7, 10, 20, 0.45)',
-                      backdropFilter: 'blur(20px)',
-                      WebkitBackdropFilter: 'blur(20px)',
+                      background: 'rgba(6, 9, 18, 0.25)',
+                      backdropFilter: 'blur(24px)',
+                      WebkitBackdropFilter: 'blur(24px)',
                       borderRadius: 'var(--radius-lg)',
-                      border: '1px solid rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.05)',
                       padding: '1.75rem',
-                      boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)'
+                      boxShadow: '0 12px 32px rgba(0, 0, 0, 0.3)'
                     }}
                   >
                     {/* Visual Image Render */}
