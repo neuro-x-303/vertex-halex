@@ -35,14 +35,6 @@ export default function HeroSection({ onSelectStartup, onOpenContact, onNavigate
     >
       <div className="container" style={{ position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         
-        {/* Top Pill Badge */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.75rem' }}>
-          <div className="pill-badge">
-            <span className="dot"></span>
-            <span>Vertex HaleX Innovation Ecosystem</span>
-          </div>
-        </div>
-
         {/* Hero Title */}
         <h1 
           style={{

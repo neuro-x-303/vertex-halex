@@ -13,6 +13,17 @@ import './App.css';
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [selectedStartupId, setSelectedStartupId] = useState('sythos');
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Responsive mobile detector
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Track active section on window scroll
   useEffect(() => {
@@ -63,7 +74,7 @@ export default function App() {
   return (
     <div className="app-container" style={{ position: 'relative', minHeight: '100vh', background: '#000000', overflowX: 'hidden' }}>
       
-      {/* Background WebThreads from React Bits with exact image configuration and dynamic linear RGB */}
+      {/* Background WebThreads: compact spread on phones, full spread on desktop */}
       <div 
         style={{
           position: 'fixed',
@@ -84,15 +95,15 @@ export default function App() {
           dynamicColor2={true}
           dynamicColorSpeed={0.06}
           speed={0.2}
-          threadCount={6}
-          frequency={6.5}
-          spread={0.2}
+          threadCount={isMobile ? 5 : 6}
+          frequency={isMobile ? 5.5 : 6.5}
+          spread={isMobile ? 0.06 : 0.2}
           taper={1.0}
           position={0.5}
           fanMode="center"
           glow={0.02}
           falloff={0.6}
-          thickness={1.1}
+          thickness={isMobile ? 0.95 : 1.1}
           brightness={0.6}
           opacity={1.0}
           mirror={true}
