@@ -5,6 +5,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/google8817aa791d49bdbf",
+      "destination": "/google8817aa791d49bdbf.html"
+    },
+    {
       "source": "/google8817aa791d49bdbf.html",
       "destination": "/google8817aa791d49bdbf.html"
     },
