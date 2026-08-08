@@ -60,7 +60,7 @@ export default function Footer({ onOpenContact }) {
             </div>
 
             <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-              An innovation ecosystem built to create, operate, and scale multiple startups, technologies, and ambitious ideas across SaaS, AI, neuroscience, FinTech, robotics, and advanced computing.
+              An innovation ecosystem and venture studio built to create, operate, and scale multiple startups, technologies, and ambitious ideas across SaaS, AI, neuroscience, FinTech, robotics, and advanced computing.
             </p>
 
             <div style={{ fontSize: '0.82rem', color: '#38bdf8', fontWeight: 600 }}>

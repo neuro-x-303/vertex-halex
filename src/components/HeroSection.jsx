@@ -58,7 +58,7 @@ export default function HeroSection({ onSelectStartup, onOpenContact, onNavigate
           style={{
             fontSize: 'clamp(1.1rem, 2vw, 1.35rem)',
             color: 'var(--text-secondary)',
-            maxWidth: '820px',
+            maxWidth: '840px',
             lineHeight: 1.6,
             marginBottom: '2.75rem',
             textAlign: 'center',
@@ -66,7 +66,7 @@ export default function HeroSection({ onSelectStartup, onOpenContact, onNavigate
             marginRight: 'auto'
           }}
         >
-          Vertex HaleX is not just a single startup company. It is an innovation ecosystem 
+          Vertex HaleX is not just a single startup company. It is an innovation ecosystem and venture studio 
           built to create, operate, and scale multiple startups, technologies, and ambitious ideas 
           across SaaS, AI, neuroscience, financial technology, robotics, hardware, and advanced computing.
         </p>
