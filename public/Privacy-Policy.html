@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | Vertex HaleX</title>
+
+  <meta
+    name="description"
+    content="Privacy Policy for Vertex HaleX, covering data collection, AI services, third-party providers, data security, privacy rights, and more."
+  />
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --surface: #f7f7f8;
+      --text: #171717;
+      --muted: #666666;
+      --border: #e5e5e5;
+      --accent: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .updated-date {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 60px;
+      padding: 60px 0 100px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 30px;
+      align-self: start;
+    }
+
+    .sidebar-title {
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 7px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      color: var(--text);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .hero {
+      padding-bottom: 35px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 45px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 0 0 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 1.3;
+      margin-top: 50px;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    ul {
+      margin: 10px 0 24px;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .notice {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 25px 0;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 25px;
+    }
+
+    .contact-card strong {
+      display: inline-block;
+      min-width: 150px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ── Mobile sidebar → hamburger dropdown ── */
+    .sidebar-toggle {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      .page-layout {
+        display: block;
+        padding-top: 30px;
+      }
+
+      .sidebar {
+        position: static;
+        margin-bottom: 28px;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      /* Hide the desktop sidebar title & links */
+      .sidebar .sidebar-title {
+        display: none;
+      }
+      .sidebar > a {
+        display: none;
+      }
+
+      /* Show the hamburger toggle */
+      .sidebar-toggle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 12px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text);
+        cursor: pointer;
+        justify-content: space-between;
+      }
+
+      /* The 3-line hamburger icon */
+      .sidebar-toggle .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .sidebar-toggle .hamburger span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 2px;
+        transition: all 0.25s ease;
+      }
+      .sidebar-toggle.open .hamburger span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      .sidebar-toggle.open .hamburger span:nth-child(2) {
+        opacity: 0;
+      }
+      .sidebar-toggle.open .hamburger span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      /* Dropdown panel */
+      .sidebar-dropdown {
+        display: none;
+        flex-direction: column;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        margin-top: -1px;
+      }
+      .sidebar-dropdown.open {
+        display: flex;
+      }
+      .sidebar-dropdown a {
+        display: block;
+        padding: 11px 16px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.15s, color 0.15s;
+      }
+      .sidebar-dropdown a:last-child {
+        border-bottom: none;
+      }
+      .sidebar-dropdown a:hover {
+        background: var(--border);
+        color: var(--text);
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="/" style="text-decoration: none; color: inherit;">Vertex HaleX</a>
+        <span> / Privacy Policy</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 24px;">
+        <a href="/terms-of-services.html" style="font-size: 14px; color: var(--muted); text-decoration: none;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Terms of Service</a>
+        <div class="updated-date">Last Updated: July 18, 2026</div>
+        <a href="/" style="font-size: 13px; font-weight: 600; padding: 7px 16px; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text);" onmouseover="this.style.background='var(--surface)'" onmouseout="this.style.background='transparent'">← Home</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page-layout">
+
+    <aside class="sidebar">
+      <!-- Desktop: visible title + links -->
+      <div class="sidebar-title">Contents</div>
+      <a href="#information">1. Information We Collect</a>
+      <a href="#use">2. How We Use Information</a>
+      <a href="#ai">3. AI and Machine Learning</a>
+      <a href="#third-party">4. Third-Party Services</a>
+      <a href="#security">5. Data Security</a>
+      <a href="#retention">6. Data Retention</a>
+      <a href="#sharing">7. Sharing Information</a>
+      <a href="#international">8. International Transfers</a>
+      <a href="#children">9. Children's Privacy</a>
+      <a href="#rights">10. Your Privacy Rights</a>
+      <a href="#cookies">11. Cookies</a>
+      <a href="#links">12. Third-Party Links</a>
+      <a href="#business">13. Business Customers</a>
+      <a href="#breach">14. Security Incidents</a>
+      <a href="#changes">15. Policy Changes</a>
+      <a href="#contact">16. Contact Us</a>
+
+      <!-- Mobile: hamburger toggle -->
+      <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebarDropdown">
+        <span>Contents</span>
+        <span class="hamburger">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+      <nav class="sidebar-dropdown" id="sidebarDropdown">
+        <a href="#information" class="dropdown-link">1. Information We Collect</a>
+        <a href="#use" class="dropdown-link">2. How We Use Information</a>
+        <a href="#ai" class="dropdown-link">3. AI and Machine Learning</a>
+        <a href="#third-party" class="dropdown-link">4. Third-Party Services</a>
+        <a href="#security" class="dropdown-link">5. Data Security</a>
+        <a href="#retention" class="dropdown-link">6. Data Retention</a>
+        <a href="#sharing" class="dropdown-link">7. Sharing Information</a>
+        <a href="#international" class="dropdown-link">8. International Transfers</a>
+        <a href="#children" class="dropdown-link">9. Children's Privacy</a>
+        <a href="#rights" class="dropdown-link">10. Your Privacy Rights</a>
+        <a href="#cookies" class="dropdown-link">11. Cookies</a>
+        <a href="#links" class="dropdown-link">12. Third-Party Links</a>
+        <a href="#business" class="dropdown-link">13. Business Customers</a>
+        <a href="#breach" class="dropdown-link">14. Security Incidents</a>
+        <a href="#changes" class="dropdown-link">15. Policy Changes</a>
+        <a href="#contact" class="dropdown-link">16. Contact Us</a>
+      </nav>
+    </aside>
+
+    <main>
+
+      <section class="hero">
+        <h1>Privacy Policy</h1>
+
+        <p>
+          Vertex HaleX ("Vertex HaleX", "we", "us", or "our")
+          respects your privacy and is committed to protecting your personal data.
+        </p>
+
+        <p>
+          This Privacy Policy explains how Vertex HaleX may collect, use,
+          store, disclose, and protect personal information when you use our
+          websites, applications, software products, AI tools, SaaS platforms,
+          services, or interact with us.
+        </p>
+
+        <div class="notice">
+          Because our products may have different features and data requirements,
+          a particular product may provide additional privacy notices, consent
+          forms, or product-specific terms. If a product-specific privacy notice
+          conflicts with this Privacy Policy, the product-specific notice will
+          apply to the extent of that conflict.
+        </div>
+      </section>
+
+      <section id="information">
+        <h2>1. Information We Collect</h2>
+
+        <p>
+          The information we collect depends on the specific Vertex HaleX
+          product or service you use.
+        </p>
+
+        <h3>Account and Identity Information</h3>
+
+        <ul>
+          <li>Name</li>
+          <li>Username</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Account credentials</li>
+          <li>Profile information</li>
+          <li>Age or date of birth where necessary</li>
+          <li>Organization or company information</li>
+        </ul>
+
+        <h3>Payment and Transaction Information</h3>
+
+        <p>
+          If you purchase a product or service, we may collect information
+          relating to payment status, transaction details, payment references,
+          order information, subscriptions, and refunds.
+        </p>
+
+        <p>
+          Payments may be processed through methods or providers such as UPI,
+          PhonePe, YONO SBI, or other payment services depending on the product.
+        </p>
+
+        <p>
+          We generally do not directly store complete debit card or credit card
+          numbers unless expressly stated for a particular service.
+        </p>
+
+        <h3>User-Generated Content</h3>
+
+        <p>
+          Depending on the product, you may provide text, images, videos, audio,
+          documents, code, files, prompts, designs, messages, project data, or
+          other content uploaded, submitted, generated, or created through our
+          services.
+        </p>
+
+        <h3>Technical and Usage Information</h3>
+
+        <ul>
+          <li>IP address</li>
+          <li>Device type</li>
+          <li>Operating system</li>
+          <li>Browser type</li>
+          <li>Application version</li>
+          <li>Device identifiers</li>
+          <li>Approximate location derived from technical information</li>
+          <li>Log information</li>
+          <li>Usage activity</li>
+          <li>Crash reports</li>
+          <li>Performance information</li>
+          <li>Security and fraud-related information</li>
+        </ul>
+      </section>
+
+      <section id="use">
+        <h2>2. How We Use Information</h2>
+
+        <p>We may use personal information to:</p>
+
+        <ul>
+          <li>Provide, operate, maintain, and improve our products and services</li>
+          <li>Create and manage user accounts</li>
+          <li>Authenticate users</li>
+          <li>Process payments and transactions</li>
+          <li>Provide customer support</li>
+          <li>Respond to questions and requests</li>
+          <li>Develop and improve software and AI systems</li>
+          <li>Detect and prevent fraud and abuse</li>
+          <li>Improve system performance</li>
+          <li>Communicate important service updates</li>
+          <li>Comply with applicable legal obligations</li>
+          <li>Enforce our agreements and policies</li>
+          <li>Protect users, systems, and Vertex HaleX</li>
+        </ul>
+      </section>
+
+      <section id="ai">
+        <h2>3. Artificial Intelligence and Machine Learning</h2>
+
+        <p>
+          Some Vertex HaleX products may use artificial intelligence and machine
+          learning technologies.
+        </p>
+
+        <p>Depending on the product, AI processing may be performed using:</p>
+
+        <ul>
+          <li>Vertex HaleX-developed AI models</li>
+          <li>Google Gemini or other Google AI services</li>
+          <li>OpenAI services</li>
+          <li>Other third-party AI providers</li>
+          <li>Cloud infrastructure and machine-learning services</li>
+        </ul>
+
+        <h3>Use of User Data for AI Training</h3>
+
+        <p>
+          Vertex HaleX does not automatically assume that customer data may be
+          used to train AI models.
+        </p>
+
+        <p>
+          Where a product intends to use user-provided content or personal data
+          for AI model training, improvement, evaluation, or related purposes,
+          the relevant product documentation, privacy notice, consent mechanism,
+          or user agreement will disclose that use.
+        </p>
+
+        <p>
+          Where applicable law requires consent or another legal basis,
+          Vertex HaleX will obtain or rely on the appropriate legal basis before
+          using personal data for such purposes.
+        </p>
+      </section>
+
+      <section id="third-party">
+        <h2>4. Third-Party Service Providers</h2>
+
+        <p>
+          We may use third-party service providers to operate our products and
+          services.
+        </p>
+
+        <p>These may include providers for:</p>
+
+        <ul>
+          <li>Cloud hosting</li>
+          <li>Database infrastructure</li>
+          <li>Authentication</li>
+          <li>File storage</li>
+          <li>AI processing</li>
+          <li>Analytics</li>
+          <li>Security</li>
+          <li>Payments</li>
+          <li>Communications</li>
+          <li>Software development and deployment</li>
+        </ul>
+
+        <p>
+          Depending on the product, these providers may include Google Cloud,
+          Google Gemini, OpenAI, Amazon Web Services (AWS), Supabase, Firebase,
+          and other service providers.
+        </p>
+      </section>
+
+      <section id="security">
+        <h2>5. Data Security</h2>
+
+        <p>
+          Vertex HaleX gives high priority to the security of customer and user
+          data.
+        </p>
+
+        <p>We may use appropriate security measures, including:</p>
+
+        <ul>
+          <li>Access controls</li>
+          <li>Authentication systems</li>
+          <li>Encryption where appropriate</li>
+          <li>Secure cloud infrastructure</li>
+          <li>Security monitoring</li>
+          <li>Access limitation</li>
+          <li>Logging and monitoring</li>
+          <li>Backup and recovery systems</li>
+        </ul>
+
+        <p>
+          However, no system, network, application, or Internet transmission can
+          be guaranteed to be completely secure.
+        </p>
+      </section>
+
+      <section id="retention">
+        <h2>6. Data Retention</h2>
+
+        <p>
+          We retain personal information only for as long as reasonably necessary
+          for the purposes described in this Privacy Policy.
+        </p>
+
+        <p>
+          Retention periods may vary depending on the type of data, product,
+          purpose of processing, legal requirements, and operational needs.
+        </p>
+
+        <p>
+          When information is no longer reasonably required, we may delete,
+          anonymize, or securely dispose of it, subject to applicable legal and
+          technical requirements.
+        </p>
+      </section>
+
+      <section id="sharing">
+        <h2>7. Sharing and Disclosure of Information</h2>
+
+        <p>We may disclose information:</p>
+
+        <ul>
+          <li>To service providers that help operate our products</li>
+          <li>To cloud infrastructure providers</li>
+          <li>To AI providers where required for a product feature</li>
+          <li>To payment providers</li>
+          <li>To security and fraud-prevention providers</li>
+          <li>To professional advisors</li>
+          <li>To comply with legal obligations</li>
+          <li>To respond to lawful government requests</li>
+          <li>To protect rights, safety, and property</li>
+          <li>In connection with a business transaction</li>
+        </ul>
+
+        <p>
+          We do not sell personal information simply because a user uses our
+          products.
+        </p>
+      </section>
+
+      <section id="international">
+        <h2>8. International Data Transfers</h2>
+
+        <p>
+          Because Vertex HaleX serves users worldwide and may use global cloud and
+          technology providers, personal information may be processed or stored
+          in countries other than the country where you live.
+        </p>
+
+        <p>
+          Where required by applicable law, we will use appropriate safeguards
+          for international transfers of personal information.
+        </p>
+      </section>
+
+      <section id="children">
+        <h2>9. Children's Privacy and Age Restrictions</h2>
+
+        <p>
+          Vertex HaleX products may have different age requirements.
+        </p>
+
+        <p>
+          Some products may be suitable for general audiences, while other
+          products may be restricted to users aged 16 or 18 and above.
+        </p>
+
+        <p>
+          The applicable age requirement will be disclosed by the relevant
+          product.
+        </p>
+
+        <p>
+          If you are a parent or legal guardian and believe that a child has
+          provided personal information to a Vertex HaleX service in violation of
+          applicable age restrictions, please contact us.
+        </p>
+      </section>
+
+      <section id="rights">
+        <h2>10. Your Privacy Rights</h2>
+
+        <p>
+          Depending on your location and applicable law, you may have rights
+          regarding your personal information.
+        </p>
+
+        <ul>
+          <li>The right to access personal information</li>
+          <li>The right to correct inaccurate information</li>
+          <li>The right to request deletion</li>
+          <li>The right to restrict or object to certain processing</li>
+          <li>The right to withdraw consent where applicable</li>
+          <li>The right to data portability</li>
+          <li>The right to opt out of certain processing where applicable</li>
+          <li>The right to lodge a complaint with a relevant authority</li>
+        </ul>
+
+        <p>
+          The availability of these rights depends on applicable law and legal
+          exceptions.
+        </p>
+      </section>
+
+      <section id="cookies">
+        <h2>11. Cookies and Similar Technologies</h2>
+
+        <p>
+          Our websites and products may use cookies, local storage, pixels,
+          SDKs, analytics technologies, and similar technologies.
+        </p>
+
+        <p>These technologies may be used for:</p>
+
+        <ul>
+          <li>Authentication</li>
+          <li>Security</li>
+          <li>Preferences</li>
+          <li>Performance</li>
+          <li>Analytics</li>
+          <li>Product functionality</li>
+        </ul>
+      </section>
+
+      <section id="links">
+        <h2>12. Third-Party Links and Services</h2>
+
+        <p>
+          Our websites and products may contain links to third-party websites,
+          services, or applications.
+        </p>
+
+        <p>
+          We are not responsible for the privacy, security, or content practices
+          of third parties.
+        </p>
+      </section>
+
+      <section id="business">
+        <h2>13. Business Customers and Client Data</h2>
+
+        <p>
+          When Vertex HaleX provides custom software development, app development,
+          website development, or other technology services to a business or
+          client, the handling of client data may be governed by a separate
+          contract, service agreement, data-processing agreement, or other
+          written arrangement.
+        </p>
+
+        <p>
+          In such situations, Vertex HaleX may process data on behalf of the
+          client according to the client's instructions and the applicable
+          agreement.
+        </p>
+      </section>
+
+      <section id="breach">
+        <h2>14. Data Breach and Security Incidents</h2>
+
+        <p>
+          If we become aware of a security incident involving personal
+          information, we may take reasonable steps to investigate, contain,
+          mitigate, and remediate the incident.
+        </p>
+
+        <p>
+          Where required by applicable law, we will provide notifications to
+          affected individuals, authorities, or other relevant parties.
+        </p>
+      </section>
+
+      <section id="changes">
+        <h2>15. Changes to This Privacy Policy</h2>
+
+        <p>
+          We may update this Privacy Policy from time to time.
+        </p>
+
+        <p>
+          When we make changes, we may update the "Last Updated" date.
+        </p>
+
+        <p>
+          For material changes, we may provide additional notice where
+          appropriate or required by applicable law.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>16. Contact Us</h2>
+
+        <div class="contact-card">
+          <p><strong>Company:</strong> Vertex HaleX</p>
+          <p><strong>Owner:</strong> Srisank Choudhary</p>
+          <p><strong>Business Origin:</strong> Bokaro Steel City, Jharkhand, India</p>
+          <p><strong>Phone:</strong> +91 9204732699</p>
+          <p>
+            <strong>Primary Email:</strong>
+            <a href="mailto:vertexhalex@gmail.com">
+              vertexhalex@gmail.com
+            </a>
+          </p>
+          <p>
+            <strong>Additional Emails:</strong>
+            <br />
+            <a href="mailto:info@vertexhalex.com">
+              info@vertexhalex.com
+            </a>
+            <br />
+            <a href="mailto:neuroxplasma@gmail.com">
+              neuroxplasma@gmail.com
+            </a>
+            <br />
+            <a href="mailto:neuro.x303@gmail.com">
+              neuro.x303@gmail.com
+            </a>
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+      <span>© 2026 Vertex HaleX. All rights reserved.</span>
+      <div style="display: flex; gap: 20px;">
+        <a href="/" style="color: var(--muted); font-size: 14px;">Home</a>
+        <a href="/terms-of-services.html" style="color: var(--muted); font-size: 14px;">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const toggle = document.getElementById('sidebarToggle');
+  const dropdown = document.getElementById('sidebarDropdown');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = dropdown.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close dropdown when a link is clicked
+  dropdown.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      dropdown.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>

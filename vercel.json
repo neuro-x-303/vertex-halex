@@ -5,6 +5,26 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/google8817aa791d49bdbf.html",
+      "destination": "/google8817aa791d49bdbf.html"
+    },
+    {
+      "source": "/[Pp]rivacy-[Pp]olicy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/[Pp]rivacy-[Pp]olicy.html",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/[Tt]erms-[Oo]f-[Ss]ervices?",
+      "destination": "/terms-of-services.html"
+    },
+    {
+      "source": "/[Tt]erms-[Oo]f-[Ss]ervices?.html",
+      "destination": "/terms-of-services.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

@@ -129,6 +129,16 @@ export default function Footer({ onOpenContact }) {
                 <a href="#founder" style={{ color: 'var(--text-secondary)' }}>Founder & CEO Profile</a>
               </li>
               <li>
+                <a href="/Privacy-policy" style={{ color: 'var(--text-secondary)' }}>
+                  Privacy Policy ↗
+                </a>
+              </li>
+              <li>
+                <a href="/Terms-Of-Services" style={{ color: 'var(--text-secondary)' }}>
+                  Terms of Service ↗
+                </a>
+              </li>
+              <li>
                 <a 
                   href="#contact" 
                   onClick={(e) => {
@@ -186,8 +196,10 @@ export default function Footer({ onOpenContact }) {
             color: 'var(--text-muted)'
           }}
         >
-          <div>
-            © 2026 Vertex HaleX. All rights reserved. • One Company. Multiple Startups. One Unified Vision.
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
+            <span>© 2026 Vertex HaleX. All rights reserved.</span>
+            <a href="/Privacy-policy" style={{ color: 'var(--text-secondary)' }}>Privacy Policy</a>
+            <a href="/Terms-Of-Services" style={{ color: 'var(--text-secondary)' }}>Terms of Service</a>
           </div>
 
           <button

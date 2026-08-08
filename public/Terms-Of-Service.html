@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Terms of Service | Vertex HaleX</title>
+
+  <meta
+    name="description"
+    content="Terms of Service for Vertex HaleX covering software products, SaaS platforms, AI tools, custom development services, payments, intellectual property, and more."
+  />
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --surface: #f7f7f8;
+      --text: #171717;
+      --muted: #666666;
+      --border: #e5e5e5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .updated-date {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 60px;
+      padding: 60px 0 100px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 30px;
+      align-self: start;
+    }
+
+    .sidebar-title {
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 7px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      color: var(--text);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .hero {
+      padding-bottom: 35px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 45px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 0 0 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 1.3;
+      margin-top: 50px;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    ul {
+      margin: 10px 0 24px;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .notice {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 25px 0;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 25px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ── Mobile sidebar → hamburger dropdown ── */
+    .sidebar-toggle {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      .page-layout {
+        display: block;
+        padding-top: 30px;
+      }
+
+      .sidebar {
+        position: static;
+        margin-bottom: 28px;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      /* Hide desktop sidebar title & links */
+      .sidebar .sidebar-title {
+        display: none;
+      }
+      .sidebar > a {
+        display: none;
+      }
+
+      /* Show the hamburger toggle */
+      .sidebar-toggle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 12px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text);
+        cursor: pointer;
+        justify-content: space-between;
+      }
+
+      /* 3-line hamburger icon */
+      .sidebar-toggle .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .sidebar-toggle .hamburger span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 2px;
+        transition: all 0.25s ease;
+      }
+      .sidebar-toggle.open .hamburger span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      .sidebar-toggle.open .hamburger span:nth-child(2) {
+        opacity: 0;
+      }
+      .sidebar-toggle.open .hamburger span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      /* Dropdown panel */
+      .sidebar-dropdown {
+        display: none;
+        flex-direction: column;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        margin-top: -1px;
+      }
+      .sidebar-dropdown.open {
+        display: flex;
+      }
+      .sidebar-dropdown a {
+        display: block;
+        padding: 11px 16px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.15s, color 0.15s;
+      }
+      .sidebar-dropdown a:last-child {
+        border-bottom: none;
+      }
+      .sidebar-dropdown a:hover {
+        background: var(--border);
+        color: var(--text);
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="/" style="text-decoration: none; color: inherit;">Vertex HaleX</a>
+        <span> / Terms of Service</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 24px;">
+        <a href="/privacy-policy.html" style="font-size: 14px; color: var(--muted); text-decoration: none;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
+        <div class="updated-date">Last Updated: July 18, 2026</div>
+        <a href="/" style="font-size: 13px; font-weight: 600; padding: 7px 16px; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text);" onmouseover="this.style.background='var(--surface)'" onmouseout="this.style.background='transparent'">← Home</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page-layout">
+
+    <aside class="sidebar">
+      <!-- Desktop: visible title + links -->
+      <div class="sidebar-title">Contents</div>
+      <a href="#about">1. About Vertex HaleX</a>
+      <a href="#eligibility">2. Eligibility</a>
+      <a href="#accounts">3. Accounts</a>
+      <a href="#use">4. Use of Services</a>
+      <a href="#ai">5. AI Services</a>
+      <a href="#generated-content">6. AI-Generated Content</a>
+      <a href="#user-content">7. User Content</a>
+      <a href="#ai-training">8. AI Training</a>
+      <a href="#intellectual-property">9. Intellectual Property</a>
+      <a href="#custom-development">10. Custom Development</a>
+      <a href="#third-party">11. Third-Party Services</a>
+      <a href="#payments">12. Payments and Fees</a>
+      <a href="#subscriptions">13. Subscriptions</a>
+      <a href="#refunds">14. Refunds and Cancellations</a>
+      <a href="#availability">15. Service Availability</a>
+      <a href="#free-services">16. Free Trials</a>
+      <a href="#prohibited-ai">17. Prohibited AI Uses</a>
+      <a href="#privacy">18. Privacy</a>
+      <a href="#feedback">19. Feedback</a>
+      <a href="#termination">20. Termination</a>
+      <a href="#disclaimers">21. Disclaimers</a>
+      <a href="#liability">22. Limitation of Liability</a>
+      <a href="#indemnification">23. Indemnification</a>
+      <a href="#changes">24. Changes</a>
+      <a href="#disputes">25. Governing Law and Disputes</a>
+      <a href="#severability">26. Severability</a>
+      <a href="#entire-agreement">27. Entire Agreement</a>
+      <a href="#contact">28. Contact Us</a>
+
+      <!-- Mobile: hamburger toggle -->
+      <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebarDropdown">
+        <span>Contents</span>
+        <span class="hamburger">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+      <nav class="sidebar-dropdown" id="sidebarDropdown">
+        <a href="#about">1. About Vertex HaleX</a>
+        <a href="#eligibility">2. Eligibility</a>
+        <a href="#accounts">3. Accounts</a>
+        <a href="#use">4. Use of Services</a>
+        <a href="#ai">5. AI Services</a>
+        <a href="#generated-content">6. AI-Generated Content</a>
+        <a href="#user-content">7. User Content</a>
+        <a href="#ai-training">8. AI Training</a>
+        <a href="#intellectual-property">9. Intellectual Property</a>
+        <a href="#custom-development">10. Custom Development</a>
+        <a href="#third-party">11. Third-Party Services</a>
+        <a href="#payments">12. Payments and Fees</a>
+        <a href="#subscriptions">13. Subscriptions</a>
+        <a href="#refunds">14. Refunds and Cancellations</a>
+        <a href="#availability">15. Service Availability</a>
+        <a href="#free-services">16. Free Trials</a>
+        <a href="#prohibited-ai">17. Prohibited AI Uses</a>
+        <a href="#privacy">18. Privacy</a>
+        <a href="#feedback">19. Feedback</a>
+        <a href="#termination">20. Termination</a>
+        <a href="#disclaimers">21. Disclaimers</a>
+        <a href="#liability">22. Limitation of Liability</a>
+        <a href="#indemnification">23. Indemnification</a>
+        <a href="#changes">24. Changes</a>
+        <a href="#disputes">25. Governing Law and Disputes</a>
+        <a href="#severability">26. Severability</a>
+        <a href="#entire-agreement">27. Entire Agreement</a>
+        <a href="#contact">28. Contact Us</a>
+      </nav>
+    </aside>
+
+    <main>
+
+      <section class="hero">
+        <h1>Terms of Service</h1>
+
+        <p>
+          Welcome to Vertex HaleX.
+        </p>
+
+        <p>
+          These Terms of Service ("Terms", "Terms of Service", or "Agreement")
+          govern your access to and use of websites, applications, software,
+          SaaS platforms, AI tools, products, and services provided by
+          Vertex HaleX ("Vertex HaleX", "we", "us", or "our").
+        </p>
+
+        <div class="notice">
+          By accessing, creating an account on, purchasing, or using any
+          Vertex HaleX product or service, you agree to be bound by these Terms.
+          If you do not agree with these Terms, you must not use the applicable
+          Vertex HaleX service.
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>1. About Vertex HaleX</h2>
+
+        <p>
+          Vertex HaleX is a technology company founded and operated from
+          Bokaro Steel City, Jharkhand, India, by Srisank Choudhary.
+        </p>
+
+        <p>Vertex HaleX may provide:</p>
+
+        <ul>
+          <li>Software products</li>
+          <li>SaaS platforms</li>
+          <li>AI tools and services</li>
+          <li>AI-powered applications</li>
+          <li>Custom software development</li>
+          <li>Website development</li>
+          <li>Mobile application development</li>
+          <li>Software consulting</li>
+          <li>Digital products</li>
+          <li>Cloud-based services</li>
+          <li>Other technology products and services</li>
+        </ul>
+
+        <p>
+          Different products may have additional terms, policies, usage rules,
+          or agreements.
+        </p>
+
+        <p>
+          If a product-specific agreement conflicts with these Terms, the
+          product-specific agreement will control for that specific product
+          or service.
+        </p>
+      </section>
+
+      <section id="eligibility">
+        <h2>2. Eligibility and Age Requirements</h2>
+
+        <p>
+          The eligibility requirements for using a Vertex HaleX product depend
+          on the specific product.
+        </p>
+
+        <p>
+          Some products may be available to general audiences. Other products
+          may require users to be at least 13, 16, or 18 years old.
+        </p>
+
+        <p>
+          The applicable age requirement will be displayed or communicated by
+          the relevant product.
+        </p>
+
+        <p>
+          If you are under the age required to legally accept these Terms in
+          your jurisdiction, you may only use the applicable service with the
+          permission and supervision of a parent or legal guardian where
+          permitted by applicable law.
+        </p>
+      </section>
+
+      <section id="accounts">
+        <h2>3. Accounts</h2>
+
+        <p>
+          Some Vertex HaleX products may require you to create an account.
+        </p>
+
+        <p>You agree to:</p>
+
+        <ul>
+          <li>Provide accurate and current information</li>
+          <li>Keep your account information updated</li>
+          <li>Keep your login credentials secure</li>
+          <li>Not allow unauthorized persons to access your account</li>
+          <li>Notify us if you believe your account has been compromised</li>
+        </ul>
+
+        <p>
+          You are responsible for activity that occurs through your account,
+          except where otherwise required by applicable law.
+        </p>
+      </section>
+
+      <section id="use">
+        <h2>4. Use of Our Services</h2>
+
+        <p>
+          You may use Vertex HaleX services only for lawful purposes and in
+          accordance with these Terms.
+        </p>
+
+        <p>You must not use our services to:</p>
+
+        <ul>
+          <li>Violate applicable laws or regulations</li>
+          <li>Commit fraud or deception</li>
+          <li>Infringe intellectual property rights</li>
+          <li>Harm, harass, threaten, or abuse others</li>
+          <li>Distribute malware or malicious code</li>
+          <li>Attempt unauthorized access to systems</li>
+          <li>Interfere with service operation</li>
+          <li>Reverse engineer restricted software</li>
+          <li>Circumvent security controls</li>
+          <li>Abuse APIs, rate limits, or system resources</li>
+          <li>Scrape or extract data without authorization</li>
+          <li>Create fake accounts for abuse or fraud</li>
+          <li>Conduct unauthorized security testing</li>
+          <li>Violate third-party platform policies</li>
+        </ul>
+      </section>
+
+      <section id="ai">
+        <h2>5. AI Services</h2>
+
+        <p>
+          Some Vertex HaleX products may use artificial intelligence and
+          machine-learning technologies.
+        </p>
+
+        <p>AI functionality may use:</p>
+
+        <ul>
+          <li>Vertex HaleX-developed AI models</li>
+          <li>Google Gemini or other Google AI services</li>
+          <li>OpenAI services</li>
+          <li>Other third-party AI providers</li>
+          <li>Cloud infrastructure and machine-learning services</li>
+        </ul>
+
+        <p>
+          AI systems may produce inaccurate, incomplete, biased, outdated, or
+          unexpected results.
+        </p>
+
+        <p>
+          You are responsible for reviewing AI-generated outputs before relying
+          on, publishing, distributing, or using them for important decisions.
+        </p>
+      </section>
+
+      <section id="generated-content">
+        <h2>6. AI-Generated Content</h2>
+
+        <p>
+          Depending on the product, Vertex HaleX may allow users to generate
+          text, images, audio, video, code, designs, documents, and other
+          digital content.
+        </p>
+
+        <p>
+          The ownership and permitted use of generated content may depend on
+          the specific product, your plan, third-party AI provider terms,
+          applicable law, and the content used to generate the output.
+        </p>
+
+        <p>
+          You are responsible for ensuring that your use of generated content
+          does not violate copyright, trademark, privacy, publicity, or other
+          legal rights.
+        </p>
+      </section>
+
+      <section id="user-content">
+        <h2>7. User Content</h2>
+
+        <p>
+          You may provide or upload content to our services, including text,
+          images, videos, audio, documents, code, files, prompts, designs,
+          data, messages, and other materials.
+        </p>
+
+        <p>
+          You retain ownership of your content unless otherwise agreed in
+          writing.
+        </p>
+
+        <p>
+          You grant Vertex HaleX the limited rights necessary to host, store,
+          process, transmit, display, modify, and otherwise use your content
+          to provide, operate, secure, maintain, and improve the applicable
+          service.
+        </p>
+
+        <p>
+          You represent that you have the necessary rights and permissions to
+          provide content to Vertex HaleX.
+        </p>
+      </section>
+
+      <section id="ai-training">
+        <h2>8. Use of Customer Data for AI Training</h2>
+
+        <p>
+          Vertex HaleX does not automatically assume that customer content may
+          be used to train AI models.
+        </p>
+
+        <p>
+          If a specific product intends to use customer data or content for AI
+          model training, model improvement, evaluation, fine-tuning, research,
+          or related machine-learning purposes, the applicable product
+          documentation, privacy notice, consent mechanism, or agreement will
+          disclose that use.
+        </p>
+      </section>
+
+      <section id="intellectual-property">
+        <h2>9. Intellectual Property</h2>
+
+        <p>
+          Vertex HaleX and its licensors own all rights, title, and interest
+          in Vertex HaleX software, source code, applications, websites,
+          platform technology, user interfaces, designs, logos, trademarks,
+          branding, documentation, product names, proprietary technology, and
+          other company-owned materials.
+        </p>
+
+        <p>
+          These Terms do not transfer ownership of Vertex HaleX intellectual
+          property to you.
+        </p>
+
+        <p>You may not, without authorization:</p>
+
+        <ul>
+          <li>Copy our software</li>
+          <li>Resell our services</li>
+          <li>Reproduce our branding</li>
+          <li>Modify proprietary software</li>
+          <li>Reverse engineer our technology</li>
+          <li>Remove ownership notices</li>
+          <li>Create unauthorized derivative works</li>
+          <li>Use Vertex HaleX trademarks without permission</li>
+        </ul>
+      </section>
+
+      <section id="custom-development">
+        <h2>10. Custom Development Services</h2>
+
+        <p>
+          For custom software, website, application, AI, or technology
+          development services, the scope of work, ownership, payment terms,
+          delivery terms, maintenance obligations, and intellectual property
+          rights may be governed by a separate proposal, quotation, statement
+          of work, contract, or written agreement.
+        </p>
+
+        <p>
+          A client should not assume that payment automatically transfers
+          ownership of all source code, tools, libraries, frameworks,
+          infrastructure, or pre-existing technology used by Vertex HaleX.
+        </p>
+
+        <h3>Out-of-Scope Customizations and Additional Charges</h3>
+
+        <p>
+          Any feature requests, modifications, additions, redesigns, or
+          customizations that fall outside the agreed project scope, original
+          proposal, quotation, or statement of work will be considered
+          <strong>out-of-scope work</strong> and will be subject to additional
+          charges.
+        </p>
+
+        <p>
+          The following are examples of changes that may be treated as
+          out-of-scope and billed separately:
+        </p>
+
+        <ul>
+          <li>New features or functionality not included in the original proposal</li>
+          <li>Significant design changes or UI overhauls after design approval</li>
+          <li>Additional integrations with third-party platforms or APIs</li>
+          <li>Changes to the technology stack or architecture mid-project</li>
+          <li>Additional screens, pages, or modules beyond the agreed deliverables</li>
+          <li>Revisions exceeding the number of revision rounds specified in the proposal</li>
+          <li>Requirements that were not disclosed or were changed after project commencement</li>
+          <li>Performance optimization, security audits, or testing beyond agreed scope</li>
+          <li>Post-delivery modifications, updates, or enhancements unless covered by a maintenance agreement</li>
+        </ul>
+
+        <div class="notice">
+          <strong>Important:</strong> Before any out-of-scope work begins,
+          Vertex HaleX will provide the client with a revised estimate or
+          change order reflecting the additional cost and revised timeline.
+          Work on out-of-scope items will not commence until the client provides
+          written approval of the additional charges.
+        </div>
+
+        <p>
+          Vertex HaleX reserves the right to pause or suspend project delivery
+          if out-of-scope requests are made that materially affect the agreed
+          timeline or resources, until a revised agreement is signed by both
+          parties.
+        </p>
+      </section>
+
+      <section id="third-party">
+        <h2>11. Third-Party Services</h2>
+
+        <p>
+          Our products may integrate with or depend on third-party services,
+          including Google Cloud, Google Gemini, OpenAI, Amazon Web Services,
+          Supabase, Firebase, payment providers, hosting providers, analytics
+          services, and other technology providers.
+        </p>
+
+        <p>
+          Third-party services may have separate terms and privacy policies.
+        </p>
+
+        <p>
+          Vertex HaleX is not responsible for the independent operation,
+          availability, security, policies, or actions of third-party services.
+        </p>
+      </section>
+
+      <section id="payments">
+        <h2>12. Payments and Fees</h2>
+
+        <p>
+          Some Vertex HaleX products and services may require payment.
+        </p>
+
+        <p>Payment methods may include:</p>
+
+        <ul>
+          <li>UPI</li>
+          <li>PhonePe</li>
+          <li>YONO SBI</li>
+          <li>Other payment methods made available by Vertex HaleX</li>
+        </ul>
+
+        <p>
+          Prices, taxes, subscription periods, and payment terms will be
+          displayed or communicated before purchase where applicable.
+        </p>
+
+        <p>
+          You agree to provide accurate payment information and pay all
+          applicable charges.
+        </p>
+      </section>
+
+      <section id="subscriptions">
+        <h2>13. Subscriptions and Recurring Services</h2>
+
+        <p>
+          Some products may be offered through monthly subscriptions, annual
+          subscriptions, or other recurring plans.
+        </p>
+
+        <p>
+          Subscription terms, renewal dates, prices, and cancellation rules may
+          vary by product.
+        </p>
+
+        <p>
+          We may change subscription prices with appropriate notice where
+          required by applicable law.
+        </p>
+      </section>
+
+      <section id="refunds">
+        <h2>14. Refunds and Cancellations</h2>
+
+        <p>
+          Refunds and cancellations are governed by the applicable product or
+          service refund policy.
+        </p>
+
+        <p>
+          Different products may have different refund rules.
+        </p>
+
+        <p>
+          Custom development services may have separate payment and refund
+          terms agreed with the client.
+        </p>
+      </section>
+
+      <section id="availability">
+        <h2>15. Service Availability</h2>
+
+        <p>
+          We aim to provide reliable services, but we do not guarantee that any
+          service will always be available, uninterrupted, error-free, secure,
+          compatible with every device, or always produce accurate results.
+        </p>
+
+        <p>
+          Services may be temporarily unavailable due to maintenance, updates,
+          security incidents, technical failures, cloud provider issues,
+          Internet outages, third-party service failures, or events beyond our
+          reasonable control.
+        </p>
+      </section>
+
+      <section id="free-services">
+        <h2>16. Free Trials and Free Services</h2>
+
+        <p>
+          Some Vertex HaleX products may provide free plans or free trials.
+        </p>
+
+        <p>
+          Free trials or free services may have usage limits, feature
+          restrictions, time limitations, storage limits, or rate limits.
+        </p>
+
+        <p>
+          We may change or terminate free plans and trials where legally
+          permitted.
+        </p>
+      </section>
+
+      <section id="prohibited-ai">
+        <h2>17. Prohibited AI Uses</h2>
+
+        <p>You must not use Vertex HaleX AI services to:</p>
+
+        <ul>
+          <li>Generate content that violates applicable law</li>
+          <li>Facilitate fraud or criminal activity</li>
+          <li>Create malware or harmful software</li>
+          <li>Conduct unauthorized cyberattacks</li>
+          <li>Impersonate individuals for fraud or deception</li>
+          <li>Infringe intellectual property rights</li>
+          <li>Harass or exploit others</li>
+          <li>Circumvent safety or security controls</li>
+          <li>Abuse third-party AI services</li>
+        </ul>
+      </section>
+
+      <section id="privacy">
+        <h2>18. Privacy</h2>
+
+        <p>
+          Our collection and use of personal information is described in our
+          Privacy Policy.
+        </p>
+
+        <p>
+          By using our services, you acknowledge that your personal information
+          may be processed as described in the applicable Privacy Policy and
+          product-specific privacy notices.
+        </p>
+      </section>
+
+      <section id="feedback">
+        <h2>19. Feedback</h2>
+
+        <p>
+          If you provide feedback, suggestions, ideas, or recommendations
+          regarding Vertex HaleX products, you grant us permission to use that
+          feedback without restriction or compensation, unless otherwise agreed
+          in writing.
+        </p>
+      </section>
+
+      <section id="termination">
+        <h2>20. Suspension and Termination</h2>
+
+        <p>We may suspend or terminate access to a service if:</p>
+
+        <ul>
+          <li>You violate these Terms</li>
+          <li>You violate applicable law</li>
+          <li>You engage in fraud or abuse</li>
+          <li>You create security risks</li>
+          <li>You fail to pay required fees</li>
+          <li>Your use creates legal or operational risk</li>
+          <li>Required by a third-party provider</li>
+          <li>Required by law</li>
+        </ul>
+
+        <p>
+          You may stop using a service at any time.
+        </p>
+      </section>
+
+      <section id="disclaimers">
+        <h2>21. Disclaimers</h2>
+
+        <p>
+          To the maximum extent permitted by applicable law, Vertex HaleX
+          services are provided on an "as is" and "as available" basis.
+        </p>
+
+        <p>
+          We do not guarantee that services will always be available,
+          error-free, accurate, uninterrupted, or suitable for every purpose.
+        </p>
+      </section>
+
+      <section id="liability">
+        <h2>22. Limitation of Liability</h2>
+
+        <p>
+          To the maximum extent permitted by applicable law, Vertex HaleX and
+          its owner, employees, contractors, affiliates, and service providers
+          will not be liable for indirect, incidental, special, consequential,
+          exemplary, or punitive damages arising from or related to your use of
+          our services.
+        </p>
+
+        <p>
+          Nothing in these Terms excludes liability that cannot legally be
+          excluded or limited under applicable law.
+        </p>
+      </section>
+
+      <section id="indemnification">
+        <h2>23. Indemnification</h2>
+
+        <p>
+          To the extent permitted by applicable law, you agree to defend,
+          indemnify, and hold harmless Vertex HaleX and its owner, employees,
+          contractors, affiliates, and service providers from claims, damages,
+          liabilities, losses, and expenses arising from your violation of
+          these Terms, unlawful use of our services, violation of third-party
+          rights, content, misuse of AI-generated output, or violation of
+          applicable law.
+        </p>
+      </section>
+
+      <section id="changes">
+        <h2>24. Changes to These Terms</h2>
+
+        <p>
+          We may update these Terms from time to time.
+        </p>
+
+        <p>
+          When we update these Terms, we may update the "Last Updated" date.
+        </p>
+
+        <p>
+          For material changes, we may provide additional notice where
+          appropriate or required by applicable law.
+        </p>
+      </section>
+
+      <section id="disputes">
+        <h2>25. Governing Law and Disputes</h2>
+
+        <p>
+          These Terms will be interpreted in accordance with applicable laws.
+        </p>
+
+        <p>
+          For disputes involving Vertex HaleX, the parties should first attempt
+          to resolve the dispute through good-faith communication.
+        </p>
+
+        <p>
+          For custom business engagements, the governing law, jurisdiction,
+          arbitration, or dispute-resolution process may be specified in a
+          separate written agreement.
+        </p>
+
+        <p>
+          Nothing in these Terms removes mandatory legal rights available to
+          consumers under applicable law.
+        </p>
+      </section>
+
+      <section id="severability">
+        <h2>26. Severability</h2>
+
+        <p>
+          If any provision of these Terms is determined to be invalid or
+          unenforceable, the remaining provisions will remain in effect to the
+          extent permitted by applicable law.
+        </p>
+      </section>
+
+      <section id="entire-agreement">
+        <h2>27. Entire Agreement</h2>
+
+        <p>
+          These Terms, together with applicable product-specific terms, privacy
+          policies, refund policies, and written agreements, constitute the
+          agreement between you and Vertex HaleX regarding the applicable
+          service.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>28. Contact Us</h2>
+
+        <div class="contact-card">
+          <p>
+            <strong>Company:</strong>
+            Vertex HaleX
+          </p>
+
+          <p>
+            <strong>Owner:</strong>
+            Srisank Choudhary
+          </p>
+
+          <p>
+            <strong>Business Origin:</strong>
+            Bokaro Steel City, Jharkhand, India
+          </p>
+
+          <p>
+            <strong>Phone:</strong>
+            +91 9204732699
+          </p>
+
+          <p>
+            <strong>Primary Email:</strong>
+            <a href="mailto:vertexhalex@gmail.com">
+              vertexhalex@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <strong>Additional Emails:</strong>
+            <br />
+
+            <a href="mailto:info@vertexhalex.com">
+              info@vertexhalex.com
+            </a>
+
+            <br />
+
+            <a href="mailto:neuroxplasma@gmail.com">
+              neuroxplasma@gmail.com
+            </a>
+
+            <br />
+
+            <a href="mailto:neuro.x303@gmail.com">
+              neuro.x303@gmail.com
+            </a>
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+      <span>© 2026 Vertex HaleX. All rights reserved.</span>
+      <div style="display: flex; gap: 20px;">
+        <a href="/" style="color: var(--muted); font-size: 14px;">Home</a>
+        <a href="/privacy-policy.html" style="color: var(--muted); font-size: 14px;">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const toggle = document.getElementById('sidebarToggle');
+  const dropdown = document.getElementById('sidebarDropdown');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = dropdown.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close dropdown when a link is clicked
+  dropdown.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      dropdown.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>
